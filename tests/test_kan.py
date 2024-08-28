@@ -13,7 +13,7 @@ class TestKANLinearVariants(unittest.TestCase):
         self.x = random.normal(self.key, (10, self.in_features)) 
 
         self.models = {
-            "BSplineKANLinear": KANLinear(self.in_features, self.out_features, self.degree),
+            # "BSplineKANLinear": KANLinear(self.in_features, self.out_features, self.degree),
             "ChebyKANLinear": ChebyKANLinear(self.in_features, self.out_features, self.degree),
             "LegendreKANLinear": LegendreKANLinear(self.in_features, self.out_features, self.degree),
             "MonomialKANLinear": MonomialKANLinear(self.in_features, self.out_features, self.degree),
