@@ -7,12 +7,13 @@ class TestKANLinearVariants(unittest.TestCase):
     def setUp(self):
         self.in_features = 4
         self.out_features = 3
-        self.degree = 5
+        self.degree = 2
 
         self.key = random.PRNGKey(0)
         self.x = random.normal(self.key, (10, self.in_features)) 
 
         self.models = {
+            "BSplineKANLinear": KANLinear(self.in_features, self.out_features, self.degree),
             "ChebyKANLinear": ChebyKANLinear(self.in_features, self.out_features, self.degree),
             "LegendreKANLinear": LegendreKANLinear(self.in_features, self.out_features, self.degree),
             "MonomialKANLinear": MonomialKANLinear(self.in_features, self.out_features, self.degree),
