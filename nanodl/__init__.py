@@ -63,6 +63,14 @@ from nanodl.__src.models.llama import (
     LlamaDataParallelTrainer,
     RotaryPositionalEncoding,
 )
+from nanodl.__src.models.kan import(
+    KANLinear,
+    ChebyKANLinear,
+    LegendreKANLinear,
+    MonomialKANLinear,
+    FourierKANLinear,
+    HermiteKANLinear,
+)
 from nanodl.__src.models.mistral import (
     GroupedRotaryShiftedWindowMultiHeadAttention,
     Mistral,
@@ -147,7 +155,7 @@ from nanodl.__src.utils.vision import (
 )
 
 __all__ = [
-    # Sklearn GPU
+    # Classical
     "NaiveBayesClassifier",
     "PCA",
     "KMeans",
@@ -285,6 +293,12 @@ __all__ = [
     "geometric",
     "gamma",
     "chisquare",
+    "KANLinear",
+    "ChebyKANLinear",
+    "LegendreKANLinear",
+    "MonomialKANLinear",
+    "FourierKANLinear",
+    "HermiteKANLinear",
 ]
 
 import importlib
